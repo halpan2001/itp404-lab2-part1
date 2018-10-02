@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Midterm Review Part 1 </title>
+  <link rel="stylesheet" href="index.css">
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Tammudu|Open+Sans:400,600" rel="stylesheet">
+</head>
+
+<body>
+  <div id="title"> Yelp Mini</div>
+
+  <div id="results">
+    <template id="result-template">
+
+      {{#each result}}
+      <div class="postbody">
+        <h2> Name: {{name}}</h2>
+        <br />
+        Location: {{location}}
+        <br />
+        Owned by:
+        <ul>
+      {{#each ownedBy}}
+        <li>
+          {{[]}}
+        </li>
+      {{/each}}
+      </ul>
+      <a href= {{yelpPage}} target="_blank" >Check us out on Yelp! </a>
+      <br />
+      {{#if acceptsApplePay}}
+      <img class="apple_logo" src = "OS_Apple.png" />
+      {{else}}
+      Doesn't accept apple pay.
+      {{/if}}
+      </div>
+      {{/each}}
+
+
+      <br />
+    </template>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="handlebars-v4.0.11.js"></script>
+  <script src="main.js"></script>
+
+
+</body>
+</html>
